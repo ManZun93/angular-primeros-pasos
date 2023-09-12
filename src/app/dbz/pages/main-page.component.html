@@ -1,0 +1,22 @@
+<h1>DBZ PERSONAJES</h1>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <dbz-list
+      [characterList]="characters"
+      (onDelete)="onDeleteCharacter($event)"
+    ></dbz-list>
+  </div>
+
+  <div class="col">
+
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)" ></dbz-add-character>
+  </div>
+</div>
+
+
+<!-- para llamar atributos usamos [] y para llamar eventos usamos() -->
+<!-- linea 11. (onNewCharacter) es el evento emitido desde add-character y "onNewCharacter" es el metodo
+que creamos en main-page para recibir la info
+$event es una palabra reservada para capturar los datos de ese evento -->
